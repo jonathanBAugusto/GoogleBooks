@@ -12,3 +12,7 @@ Um aplicativo feito com C# e WindowsForms que lê os dedos da Api GoogleBooks e 
 # Dificuldades
 
 - A maior e talvez unica dificuldade foi realizar o trabalho asincrono de ambas janelas;
+
+
+# Como testar
+Para utiliza-lo é necessario ter instalado na maquina o Net Framework 4.7.2;
