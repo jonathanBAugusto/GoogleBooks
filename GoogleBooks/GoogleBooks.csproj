@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC80444C-BD9E-4C3A-9898-4B50B0DB3DFF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GoogleBooks</RootNamespace>
+    <AssemblyName>GoogleBooks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\JhonWindows\Desktop\GoogleBooks\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>144474BBB924DE714E7061871612A52BC5D6870E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GoogleBooks_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Funcs.cs" />
+    <Compile Include="Connection\Conn.cs" />
+    <Compile Include="Connection\HttpManager.cs" />
+    <Compile Include="Connection\Querys.cs" />
+    <Compile Include="Control\PesquisaController.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\Favorite.cs" />
+    <Compile Include="Model\ImageLinks.cs" />
+    <Compile Include="Model\VolumeInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\UcLoadingPesquisa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcLoadingPesquisa.Designer.cs">
+      <DependentUpon>UcLoadingPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcCardBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcCardBook.Designer.cs">
+      <DependentUpon>UcCardBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcCardFavorito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcCardFavorito.Designer.cs">
+      <DependentUpon>UcCardFavorito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcFavoritos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcFavoritos.Designer.cs">
+      <DependentUpon>UcFavoritos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcPesquisa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcPesquisa.Designer.cs">
+      <DependentUpon>UcPesquisa.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\UcLoadingPesquisa.resx">
+      <DependentUpon>UcLoadingPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcCardBook.resx">
+      <DependentUpon>UcCardBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcCardFavorito.resx">
+      <DependentUpon>UcCardFavorito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcFavoritos.resx">
+      <DependentUpon>UcFavoritos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcPesquisa.resx">
+      <DependentUpon>UcPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GoogleBooks_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SQLitePCLRaw.bundle_green">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.113.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>4.7.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\void-star48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balls-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple-spinner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple-spinner1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

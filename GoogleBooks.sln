@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleBooks", "GoogleBooks\GoogleBooks.csproj", "{BC80444C-BD9E-4C3A-9898-4B50B0DB3DFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC80444C-BD9E-4C3A-9898-4B50B0DB3DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC80444C-BD9E-4C3A-9898-4B50B0DB3DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC80444C-BD9E-4C3A-9898-4B50B0DB3DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC80444C-BD9E-4C3A-9898-4B50B0DB3DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E4A1B5A-3B2A-4357-848E-AAE9C6A71D17}
+	EndGlobalSection
+EndGlobal
