@@ -10,7 +10,7 @@ namespace GoogleBooks.Connection
         public Conn(){}
         protected static SQLiteConnection dbConn() 
         {
-            sqlC = new SQLiteConnection("Data Source=base.sqlite; Version=3;");
+            sqlC = new SQLiteConnection("Data Source=c:\\GoogleBooks\\base.sqlite; Version=3;");
             sqlC.Open();
             return sqlC;
         }
@@ -18,11 +18,15 @@ namespace GoogleBooks.Connection
         {
             try
             {
-                if (!File.Exists("base.sqlite")) 
+                if (!Directory.Exists("c:\\GoogleBooks\\")) 
                 {
-                    SQLiteConnection.CreateFile(@"base.sqlite");
+                    Directory.CreateDirectory("c:\\GoogleBooks\\");
                 }
-                
+                if (!File.Exists("c:\\GoogleBooks\\base.sqlite"))
+                {
+                    SQLiteConnection.CreateFile(@"c:\\GoogleBooks\\base.sqlite");
+                }
+
                 createTable(Querys.TABLE_FAVORITOS);
             }
             catch
