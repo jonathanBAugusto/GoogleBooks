@@ -1,6 +1,6 @@
 # Google Books List
 
-Um aplicativo feito com C# e WindowsForms que lê os dedos da Api GoogleBooks e permite visualizar e Gerenciar uma lista de favoritos.
+Um aplicativo feito com C# e WindowsForms que lê os dados da Api GoogleBooks e permite visualizar e Gerenciar uma lista de favoritos.
 
 # Tecnologias
 
