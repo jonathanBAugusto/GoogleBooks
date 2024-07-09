@@ -179,7 +179,7 @@
       <Version>1.0.113.1</Version>
     </PackageReference>
     <PackageReference Include="System.Text.Json">
-      <Version>4.7.2</Version>
+      <Version>8.0.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
